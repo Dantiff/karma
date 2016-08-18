@@ -1,0 +1,61 @@
+<DOCTYPE html>
+<html>
+
+<head>
+	<title> August 8 -HTML </title>
+	<link rel="stylesheet" type="text/css" href="style.css"> <! links the web page to an external CSS file for styling the content>
+</head>
+<body>
+		<h1>This describes heading H1</h1>
+		<h2>This describes heading H2</h2>
+		<h3>This describes heading H3</h3>
+		<h4>This describes heading H4</h4>
+		<h5>This describes heading H5</h5>
+		<h6>This describes heading H6</h6>
+		<p>This is a paragraph as displayed in basic HTML</p>
+	<p> This is a sample audio content that uses the .mp3 or .ogg video formats </p>
+	<div>
+		<audio controls>
+  		<source src="horse.ogg" type="audio/ogg">
+  		<source src="horse.mp3" type="audio/mpeg">
+		</audio>
+	</div>
+	<p> This is a sample video content that uses the .mp4 or .ogg video formats </p>
+	<div>
+		<video width="400" controls>
+  		<source src="mov_bbb.mp4" type="video/mp4">
+  		<source src="mov_bbb.ogg" type="video/ogg">
+		</video>
+	</div>
+	<div>
+		<p> The follong diagram illustrates the use of Canvas in HTML as an example of graphics enabled in HTML </p>
+		 <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+		</canvas> 
+		<script>
+			//to draw a horizonta line
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.moveTo(0,0);
+			ctx.lineTo(200,100);
+			ctx.stroke();
+			//to inserted a "hello World" text
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.font = "30px Arial";
+			ctx.strokeText("Hello World",10,50);
+			//to insert a circle
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.beginPath();
+			ctx.arc(95,50,40,0,2*Math.PI);
+			ctx.stroke();
+		</script>
+	</div>
+	<div>
+	<p> The following illustrates the use of the SVG element to draw graphics in HTML5 </p>
+	<svg width="400" height="100">
+  		<rect width="400" height="100" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+	</svg>
+	</div>
+</body>
+</html>
